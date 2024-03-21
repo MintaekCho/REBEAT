@@ -9,7 +9,7 @@ export default function RadialBarChart({ data }: { data: any }) {
             innerRadius={0.15}
             padding={0.2}
             cornerRadius={45}
-            margin={{ top: 20, right: 300, bottom: 120, left: 20 }}
+            margin={{ top: 20, right: 250, bottom: 60, left: 20 }}
             colors={{ scheme: 'pastel1' }}
             borderColor={{
                 from: 'color',

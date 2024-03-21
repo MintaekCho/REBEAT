@@ -45,9 +45,9 @@ export default function OptionContainer() {
         });
     };
     return (
-        <div className="w-full h-full flex flex-col gap-[10px] mt-[35px]">
-            <h2 className="text-[28px] font-bold text-[#2C2C2C]">Options</h2>
-            <div className="w-full h-1/2 flex flex-col gap-[11px] px-[16px]">
+        <div className="w-full h-full flex flex-col gap-[16px] mt-[25px]">
+            <h2 className="text-[24px] font-bold text-[#2C2C2C]">Options</h2>
+            <div className="w-full h-2/5 flex flex-col gap-[11px] px-[16px]">
                 {OPTION_ITEM_LIST.map((item, i) => {
                     return (
                         <OptiosBox
@@ -60,7 +60,7 @@ export default function OptionContainer() {
                     );
                 })}
             </div>
-            <h2 className="text-[28px] font-bold text-[#2C2C2C] mt-4">Address</h2>
+            <h2 className="text-[24px] font-bold text-[#2C2C2C] mt-[25px]">Address</h2>
             <div className="w-full h-auto flex flex-col gap-[12px] px-[16px]">
                 <AddressInput
                     name="address"
@@ -75,7 +75,7 @@ export default function OptionContainer() {
                     onChange={handleAddressForm}
                 />
             </div>
-            <h2 className="text-[28px] font-bold text-[#2C2C2C] mt-4">Support</h2>
+            <h2 className="text-[24px] font-bold text-[#2C2C2C]">Support</h2>
             <div className="w-full flex items-center gap-5">
                 <ManualButton
                     text="Detail specifications"
@@ -85,7 +85,7 @@ export default function OptionContainer() {
                 <ManualButton text="User Manual" icon={<ManualICon />} onClick={() => {}} />
             </div>
             <button
-                className="w-[25%] h-[50px] grid place-items-center bg-[#536CF4] relative left-1/2 -translate-x-1/2 rounded-[9px] text-white mt-5 cursor-pointer"
+                className="w-[25%] h-[40px] grid place-items-center bg-[#536CF4] relative left-1/2 -translate-x-1/2 rounded-[9px] text-white cursor-pointer"
                 onClick={() => {}}
             >
                 Summit

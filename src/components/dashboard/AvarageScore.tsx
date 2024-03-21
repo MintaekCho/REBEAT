@@ -31,7 +31,7 @@ export default function AvarageScore() {
     return (
         <div className='w-full h-full relative'>
             <PieChart data={chartData} />
-            <div className='absolute z-50 left-1/2 -translate-x-1/2 top-1/2 flex flex-col items-center'>
+            <div className='absolute z-50 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex flex-col items-center'>
                 <span className='text-[#030303] text-5xl font-semibold'>85</span>
                 <div className='px-[17px] py-[3px] text-[#3c8336] bg-[#E2EFE5] rounded-[4px]'>
                     <span>+1.3%</span>

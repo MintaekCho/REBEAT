@@ -21,8 +21,8 @@ export default function CPRInfo() {
                             </div>
                         </div>
                         <div className="flex items-end gap-1">
-                            <span className="text-[44px] font-[700] text-white">27</span>
-                            <span className="text-[44px] font-[400] text-[#AEAEAE]">times</span>
+                            <span className="text-[40px] font-[700] text-white">27</span>
+                            <span className="text-[40px] font-[400] text-[#AEAEAE]">times</span>
                         </div>
                         <LINE_ARROW className="absolute bottom-2 right-2" />
                         <div className="p-1 bg-[#5489F7] rounded-full absolute top-[25px] right-4 text-white">
@@ -40,7 +40,7 @@ export default function CPRInfo() {
                             </div>
                         </div>
                         <div className="flex items-end gap-1">
-                            <span className="text-[44px] font-[700] text-white">3min 12sec</span>
+                            <span className="text-[40px] font-[700] text-white">3min 12sec</span>
                         </div>
                     </div>
                 </div>
