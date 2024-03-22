@@ -3,8 +3,281 @@ import SelectBox from '@/components/apply/SelectBox';
 import { ReactComponent as ReturnIcon } from '@/assets/icons/ic_return.svg';
 import { ReactComponent as LocationIcon } from '@/assets/icons/ic_active_location.svg';
 import { ReactComponent as TrendIcon } from '@/assets/icons/ic_trend.svg';
+import LineChart from '@/components/dashboard/chart/LineChart';
 
 export default function Apply() {
+    const chartData = [
+        {
+          "id": "japan",
+          "color": "hsl(335, 70%, 50%)",
+          "data": [
+            {
+              "x": "plane",
+              "y": 56
+            },
+            {
+              "x": "helicopter",
+              "y": 41
+            },
+            {
+              "x": "boat",
+              "y": 73
+            },
+            {
+              "x": "train",
+              "y": 20
+            },
+            {
+              "x": "subway",
+              "y": 79
+            },
+            {
+              "x": "bus",
+              "y": 30
+            },
+            {
+              "x": "car",
+              "y": 275
+            },
+            {
+              "x": "moto",
+              "y": 132
+            },
+            {
+              "x": "bicycle",
+              "y": 129
+            },
+            {
+              "x": "horse",
+              "y": 33
+            },
+            {
+              "x": "skateboard",
+              "y": 234
+            },
+            {
+              "x": "others",
+              "y": 298
+            }
+          ]
+        },
+        {
+          "id": "france",
+          "color": "hsl(268, 70%, 50%)",
+          "data": [
+            {
+              "x": "plane",
+              "y": 16
+            },
+            {
+              "x": "helicopter",
+              "y": 15
+            },
+            {
+              "x": "boat",
+              "y": 208
+            },
+            {
+              "x": "train",
+              "y": 248
+            },
+            {
+              "x": "subway",
+              "y": 90
+            },
+            {
+              "x": "bus",
+              "y": 234
+            },
+            {
+              "x": "car",
+              "y": 252
+            },
+            {
+              "x": "moto",
+              "y": 57
+            },
+            {
+              "x": "bicycle",
+              "y": 228
+            },
+            {
+              "x": "horse",
+              "y": 110
+            },
+            {
+              "x": "skateboard",
+              "y": 109
+            },
+            {
+              "x": "others",
+              "y": 124
+            }
+          ]
+        },
+        {
+          "id": "us",
+          "color": "hsl(227, 70%, 50%)",
+          "data": [
+            {
+              "x": "plane",
+              "y": 20
+            },
+            {
+              "x": "helicopter",
+              "y": 146
+            },
+            {
+              "x": "boat",
+              "y": 227
+            },
+            {
+              "x": "train",
+              "y": 173
+            },
+            {
+              "x": "subway",
+              "y": 165
+            },
+            {
+              "x": "bus",
+              "y": 193
+            },
+            {
+              "x": "car",
+              "y": 52
+            },
+            {
+              "x": "moto",
+              "y": 112
+            },
+            {
+              "x": "bicycle",
+              "y": 269
+            },
+            {
+              "x": "horse",
+              "y": 265
+            },
+            {
+              "x": "skateboard",
+              "y": 61
+            },
+            {
+              "x": "others",
+              "y": 171
+            }
+          ]
+        },
+        {
+          "id": "germany",
+          "color": "hsl(16, 70%, 50%)",
+          "data": [
+            {
+              "x": "plane",
+              "y": 90
+            },
+            {
+              "x": "helicopter",
+              "y": 259
+            },
+            {
+              "x": "boat",
+              "y": 293
+            },
+            {
+              "x": "train",
+              "y": 148
+            },
+            {
+              "x": "subway",
+              "y": 134
+            },
+            {
+              "x": "bus",
+              "y": 190
+            },
+            {
+              "x": "car",
+              "y": 90
+            },
+            {
+              "x": "moto",
+              "y": 38
+            },
+            {
+              "x": "bicycle",
+              "y": 198
+            },
+            {
+              "x": "horse",
+              "y": 132
+            },
+            {
+              "x": "skateboard",
+              "y": 294
+            },
+            {
+              "x": "others",
+              "y": 53
+            }
+          ]
+        },
+        {
+          "id": "norway",
+          "color": "hsl(224, 70%, 50%)",
+          "data": [
+            {
+              "x": "plane",
+              "y": 36
+            },
+            {
+              "x": "helicopter",
+              "y": 18
+            },
+            {
+              "x": "boat",
+              "y": 184
+            },
+            {
+              "x": "train",
+              "y": 76
+            },
+            {
+              "x": "subway",
+              "y": 30
+            },
+            {
+              "x": "bus",
+              "y": 72
+            },
+            {
+              "x": "car",
+              "y": 94
+            },
+            {
+              "x": "moto",
+              "y": 98
+            },
+            {
+              "x": "bicycle",
+              "y": 126
+            },
+            {
+              "x": "horse",
+              "y": 20
+            },
+            {
+              "x": "skateboard",
+              "y": 121
+            },
+            {
+              "x": "others",
+              "y": 166
+            }
+          ]
+        }
+      ];
     return (
         <div className="w-full h-full bg-[#F6F6F6] relative">
             {/* <div className="w-[30%] h-[80%] min-h-[880px] flex flex-col items-center absolute right-[10%] bottom-0 bg-white rounded-t-[45px] px-[40px]">
@@ -51,6 +324,8 @@ export default function Apply() {
                             <span className='absolute top-5 left-1/2 -translate-x-1/2 text-white text-xl font-semibold'>Final Score</span>
                             <span className='absolute bottom-[35px] left-1/2 -translate-x-1/2 text-white text-7xl font-semibold'>87</span>
                         </div>
+                        <LineChart data={chartData} />
+
                     </div>
                     <div className='w-full h-[10%] bg-[#4C4645] relative'>
                         <span className='absolute top-1 right-2 text-[#D4D6DC] text-[14px]'>Accuracy trend graph displays feedback message</span>
