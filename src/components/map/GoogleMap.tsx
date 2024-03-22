@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { GoogleMapStyle } from './GoogleMapStyle';
 
 declare global {
     interface Window {
@@ -17,6 +18,7 @@ export default function GoogleMap() {
             featureType: 'poi',
             elementType: 'labels.icon',
             stylers: [{visibility: 'off'}],
+            styles: GoogleMapStyle 
         });     
         
         setMap(newMap);
