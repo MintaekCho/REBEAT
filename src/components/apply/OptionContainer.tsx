@@ -8,7 +8,7 @@ import OptiosBox from '@/components/apply/OptiosBox';
 import { ReactComponent as ManualICon } from '@/assets/icons/ic_manual.svg';
 import AddressInput from '@/components/apply/AddressInput';
 
-export default function OptionContainer() {
+export default function OptionContainer({handleApplySubmit}: {handleApplySubmit: () => void}) {
     const OPTION_ITEM_LIST = [
         {
             title: 'REBEAT',
@@ -85,8 +85,8 @@ export default function OptionContainer() {
                 <ManualButton text="User Manual" icon={<ManualICon />} onClick={() => {}} />
             </div>
             <button
-                className="w-[25%] h-[40px] grid place-items-center bg-[#536CF4] relative left-1/2 -translate-x-1/2 rounded-[9px] text-white cursor-pointer"
-                onClick={() => {}}
+                className="w-[25%] h-[40px] z-20 grid place-items-center bg-[#536CF4] relative left-1/2 -translate-x-1/2 rounded-[9px] text-white cursor-pointer"
+                onClick={handleApplySubmit}
             >
                 Summit
             </button>

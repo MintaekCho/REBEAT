@@ -77,19 +77,22 @@ export default function Header() {
                                 onClick={() => handleSetCurrentTab(category)}
                             >
                                 <div
-                                    className={`w-[163px] py-[14px] ${
-                                        isSelected ? 'bg-[#0E1619]' : 'bg-inherit'
-                                    } flex items-center justify-center gap-[10px] rounded-full`}
+                                    className={`w-[163px] py-[14px] bg-inherit flex items-center justify-center gap-[10px] rounded-full`}
                                 >
-                                    {selectCategory.id === category.id && category.icon}
+                                    {selectCategory.id === category.id && (
+                                        <div className='z-30'>
+                                            {category.icon}
+                                        </div>
+                                    )}
                                     <p
                                         className={`text-[18px] ${
                                             isSelected ? 'text-[#FBFBFB]' : 'text-[#77838A]'
-                                        } font-normal`}
+                                        } font-normal z-30`}
                                     >
                                         {category.name}
                                     </p>
                                 </div>
+                                <div style={{width: `${100 / HEADER_CATEGORY.length}%`, left: `${(100 / HEADER_CATEGORY.length) * (selectCategory.id - 1)}%`}} className='h-full bg-[#0E1619] rounded-full absolute top-0 duration-500' />
                             </div>
                         );
                     })}

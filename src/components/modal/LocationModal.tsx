@@ -6,7 +6,7 @@ import { ReactComponent as History } from '@/assets/icons/ic_history.svg';
 import { ReactComponent as Focus } from '@/assets/icons/ic_focus.svg';
 import { ReactComponent as Right_Arrow } from '@/assets/icons/ic_right_arrow.svg';
 
-export default function LocationModal() {
+export default function LocationModal({handleInitialTrending}: {handleInitialTrending: () => void}) {
     return (
         <div style={{backgroundColor: 'rgba(255, 255, 255, 0.8)'}} className="w-full min-w-[500px] max-w-[567px] min-h-[300px] max-h-[420px] flex flex-col gap-10 fixed left-[23px] bottom-[23px] px-[24px] py-[22px] rounded-[23px] border border-white">
             <div className="flex gap-[10px]">
@@ -36,7 +36,7 @@ export default function LocationModal() {
                     </div>
                 </div>
             </div>
-            <button className="w-[210px] px-[24px] py-[16px] bg-black flex items-center justify-center gap-[6px] text-white text-[22px] rounded-b-[16px] rounded-tr-[16px] self-end">
+            <button className="w-[210px] px-[24px] py-[16px] bg-black flex items-center justify-center gap-[6px] text-white text-[22px] rounded-b-[16px] rounded-tr-[16px] self-end" onClick={handleInitialTrending}>
                 <p>Show Details</p>
                 <Right_Arrow />
             </button>

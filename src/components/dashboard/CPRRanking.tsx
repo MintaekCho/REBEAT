@@ -29,6 +29,10 @@ export default function CPRRanking() {
                 <BarChart color='#E5A462' value={90} icon={<JapanIcon />} />
                 <BarChart color='#93EB' value={87} icon={<KingdomIcon />} />
                 <BarChart color='#FF5858' value={50} icon={<NorthKoreaIcon />} />
+                <BarChart color='#FBD869' value={92} />
+                <BarChart color='#93EBB2' value={66} />
+                <BarChart color='#FF5858' value={77} />
+                <BarChart color='#E5A462' value={11} />
             </div>
         </div>
     );
